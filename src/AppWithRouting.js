@@ -8,6 +8,7 @@ import { lazy, Suspense } from "react";
 import HigherOrderComponent from "./HigherOrderComponent";
 //import IndividualProduct from "./IndividualProduct";
 import 'bootstrap/dist/css/bootstrap.css';
+import CounterComponent from "./CounterComponent";
 
 const IndividualProduct = lazy(() => import("./IndividualProduct"));
 const About = lazy(() => import("./About"));
@@ -30,6 +31,7 @@ function AppWithRouting() {
         <Route path="/news-store" element={<NewsStore />} />
         <Route path="/about" element={<About />} />
         <Route path="/higher-order/:logged" element={<HigherOrderComponent />} />
+        <Route path="/counter" element={<CounterComponent />} />
       </Routes>
       </Suspense>
     </BrowserRouter>
